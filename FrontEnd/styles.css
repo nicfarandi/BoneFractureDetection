@@ -1,0 +1,26 @@
+:root {
+  --background: #0E2E57;
+  --primary: #14529E
+  --secondary: #8FB4E1;
+  --white: #f1f1f1;
+  --gray: #DDDDDD;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.text {
+  color: black;
+  font-weight: 500;
+}
