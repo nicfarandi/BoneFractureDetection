@@ -17,6 +17,61 @@
     />
   </head>
   <body>
+    <div class="left-content">
+      <p class="title">Bone Fracture Classification</p>
+      <p class="about">
+        This is a simple chatbot that can help you classify the type of bone
+        fracture based on the x-ray image you provide. Please upload the x-ray
+        image of the bone fracture and the chatbot will classify the type of
+        bone fracture.
+      </p>
+    </div>
+    <div class="chat-bot">
+      <div class="chat-box">
+        <div class="chat-content">
+          <div class="chat-bot-message-container">
+            <img src="assets/chat-bot.png" class="chat-bot-icon" />
+            <div class="chat-bot-message">
+              <p class="chat-text">
+                Hello! I am a chatbot. How can I help you?
+              </p>
+            </div>
+          </div>
+          <!-- <div class="chat-user-message-container">
+            <img
+              class="chat-user-image"
+              src="../Bone Break Classification/Comminuted fracture/Train/10140_2011_941_Fig2_HTML_jpg.rf.37eefc302b45d5a693e0dfbf6e629426.jpg"
+              alt=""
+            />
+          </div>
+          <div class="chat-user-message-container">
+            <div class="chat-user-message">
+              <p class="chat-text">Please help me classify this image.</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <form class="chat-input" onsubmit="return false;">
+        <input type="file" id="file" accept="image/*" />
+        <button type="submit" class="upload-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-send"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
     <script src="script.js" type="module"></script>
   </body>
 </html>
