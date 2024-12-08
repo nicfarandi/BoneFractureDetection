@@ -29,7 +29,7 @@ body {
   padding-inline: 6rem;
   padding-block: 4rem;
   background-color: var(--background);
-  gap: 20%;
+  gap: 12.5%;
   min-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
@@ -55,10 +55,11 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   background-color: var(--white);
   border-radius: 16px;
-  padding-inline: 1rem;
-  padding-top: 1rem;
+  padding-inline: 0.75rem;
+  padding-top: 1.25rem;
   height: 100;
   min-height: 0;
   box-sizing: border-box;
@@ -71,6 +72,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: auto;
+  width: 100%;
   max-height: calc(100vh - 15rem);
   padding-right: 0.5rem;
 }
@@ -114,9 +116,13 @@ body {
   padding: 1rem;
   border-radius: 8px;
   border-bottom-left-radius: 0px;
-  max-width: 50%;
+  max-width: 60%;
   background-color: var(--secondary);
   color: var(--white);
+}
+
+.chat-text {
+  font-size: 1.2rem;
 }
 
 .chat-user-message-container {
@@ -153,6 +159,7 @@ body {
   gap: 1rem;
   background-color: var(--gray);
   padding: 0.5rem;
+  width: 100%;
   border-radius: 8px;
   margin-top: 0.8rem;
 }
@@ -167,6 +174,7 @@ body {
   font-size: 1rem;
   color: var(--black);
   cursor: pointer;
+  width: 100%;
 }
 
 .chat-input input[type="file"]::-webkit-file-upload-button {
@@ -192,8 +200,8 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  height: 100%;
-  width: 56px;
+  height: 48px;
+  width: 48px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-out;
 }
@@ -204,4 +212,65 @@ body {
 
 .upload-button:active {
   transform: scale(0.9);
+}
+
+@media (max-width: 1280px) {
+  body {
+    gap: 10%;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+  }
+  .chat-box {
+    max-height: calc(100vh - 11rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 1.5rem;
+    padding-inline: 1.25rem;
+    overflow: auto;
+  }
+
+  .chat-bot {
+    min-height: 600px;
+    padding-bottom: 0.5rem;
+  }
+
+  .chat-box {
+    max-height: calc(100vh - 8rem);
+  }
+
+  .left-content {
+    flex: 0;
+  }
+
+  .chat-bot {
+    padding-inline: 0.5rem;
+  }
+
+  .chat-bot-message-container {
+    gap: 0.5rem;
+  }
+
+  .chat-box {
+    padding-right: 0;
+  }
+
+  .chat-bot-message {
+    max-width: 100%;
+  }
+
+  .chat-text {
+    font-size: 1rem;
+  }
+
+  .chat-user-message {
+    max-width: 100%;
+  }
+  .chat-input {
+    gap: 0.5rem;
+  }
 }
