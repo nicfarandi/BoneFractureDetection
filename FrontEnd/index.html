@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="left-content">
+    <section class="left-content">
       <p class="title">Bone Fracture Classification</p>
       <p class="about">
         This is a simple AI model that can help you classify the type of bone
@@ -25,19 +25,48 @@
         image of the bone fracture and the chatbot will classify the type of
         bone fracture.
       </p>
-    </div>
-    <div class="chat-bot">
+      <p class="all-fractures">
+        We have trained the model on the following types of bone fractures:
+        <li class="fracture-type">Avulsion Fracture</li>
+        <li class="fracture-type">Comminuted Fracture</li>
+        <li class="fracture-type">Fracture Dislocation</li>
+        <li class="fracture-type">Greenstick Fracture</li>
+        <li class="fracture-type">Hairline Fracture</li>
+      </p>
+      <p class="note">
+        Note: This is a simple AI model and the classification may not be 100%
+        accurate. Please consult a doctor for accurate diagnosis.
+      </p>
+      <a
+        href="https://github.com/nicfarandi/BoneFractureDetection"
+        target="_blank"
+        class="github-button"
+      >
+        Github
+      </a>
+    </section>
+    <section class="chat-bot">
       <div class="chat-box">
         <div class="chat-content">
           <div class="chat-bot-message-container">
             <img src="assets/chat-bot.png" class="chat-bot-icon" />
             <div class="chat-bot-message">
               <p class="chat-text">
-                Hello! 
-                Send me the x-ray image of the bone fracture and I will classify the type of bone fracture.
+                Hello! Send me the x-ray image of the bone fracture and I will
+                classify the type of bone fracture.
               </p>
             </div>
           </div>
+          <!-- <div class="chat-bot-message-container">
+            <img src="assets/chat-bot.png" class="chat-bot-icon" />
+            <div class="chat-bot-message">
+              <div class="loading-animation-container">
+                <div class="loading-animation"></div>
+                <div class="loading-animation"></div>
+                <div class="loading-animation"></div>
+              </div>
+            </div>
+          </div> -->
           <!-- <div class="chat-user-message-container">
             <img
               class="chat-user-image"
@@ -72,7 +101,7 @@
           </svg>
         </button>
       </form>
-    </div>
+    </section>
     <script src="script.js" type="module"></script>
   </body>
 </html>

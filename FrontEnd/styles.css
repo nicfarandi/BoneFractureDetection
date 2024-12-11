@@ -18,7 +18,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li {
   color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -26,13 +27,12 @@ h6 {
 body {
   display: flex;
   flex-direction: row;
-  padding-inline: 6rem;
-  padding-block: 4rem;
+  padding-inline: 5rem;
+  padding-block: 2rem;
   background-color: var(--background);
   gap: 12.5%;
   min-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .left-content {
@@ -41,7 +41,7 @@ body {
 
 .title {
   font-family: "Merriweather", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-block: 1rem;
 }
@@ -49,6 +49,62 @@ body {
 .about {
   line-height: 1.5;
   font-size: 1.2rem;
+  text-align: justify;
+}
+
+.all-fractures {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.fracture-type {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.note {
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.github-button {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background-color: var(--background);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  position: relative;
+  font-weight: bold;
+  font-family: Merriweather, sans-serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
+  text-decoration: none;
+}
+
+.github-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: -3;
+  transform: translateX(-100%) skewX(45deg);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+}
+
+.github-button:hover::before {
+  transform: translateX(0) skewX(45deg);
+}
+
+.github-button:hover {
+  color: var(--background);
 }
 
 .chat-bot {
@@ -73,7 +129,7 @@ body {
   justify-content: flex-start;
   overflow-y: auto;
   width: 100%;
-  max-height: calc(100vh - 15rem);
+  max-height: calc(100vh - 11rem);
   padding-right: 0.5rem;
 }
 
@@ -121,8 +177,53 @@ body {
   color: var(--white);
 }
 
+.loading-animation-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  align-items: center;
+}
+
+.loading-animation {
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: var(--gray);
+  border-radius: 50%;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.loading-animation:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-animation:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-animation:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    opacity: 0.7;
+    transform: translateY(0.1rem);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-0.6rem);
+  }
+}
+
 .chat-text {
   font-size: 1.2rem;
+}
+
+.chat-text-bold {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .chat-user-message-container {
@@ -260,7 +361,7 @@ body {
   }
 
   .chat-bot-message {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .chat-text {
